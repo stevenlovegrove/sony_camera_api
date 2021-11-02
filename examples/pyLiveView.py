@@ -145,8 +145,9 @@ class liveview_grabber(threading.Thread):
       lst.start()
 
       versions = camera.getVersions()
+
       if versions and 'result' in versions.keys():
-         version = versions['result'][-1]
+         version = versions['result'][0][-1]
       else:
          version = '1.0'
 
